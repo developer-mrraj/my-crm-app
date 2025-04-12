@@ -1,0 +1,127 @@
+*{
+    box-sizing: border-box;
+  }
+   
+   /* Navbar Styling */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      z-index: 1000;
+    }
+  
+    .navbar-left h2 {
+      margin: 0;
+    }
+  
+    .navbar-right .btn {
+      color: white;
+      background-color: #555;
+      border: none;
+      padding: 8px 15px;
+      margin-left: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  
+    .navbar-right .btn:hover {
+      background-color: #4caf50;
+    }
+  
+    /* Sidebar Styling */
+   
+  
+    /* Content Styling */
+    .container {
+      margin-top: 70px; 
+      margin-left: 200px;
+      /* padding: 20px; */
+  
+    }
+  
+    /* Sidebar Styles */
+  .sidebar {
+    position: fixed;
+    top: 60px; /* Adjust to match navbar height */
+    left: 0;
+    width: 60px; /* Initial narrow width */
+    height: calc(100vh - 60px); /* Full height minus navbar height */
+    background-color: #f4f4f4;
+    padding: 15px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s ease; /* Smooth transition for width */
+    overflow: hidden; /* Hide content when sidebar is narrow */
+  }
+  
+  /* Logo Styles */
+  .sidebar .logo {
+    text-align: center;
+    padding: 10px;
+    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Menu Styles */
+  .sidebar .menu {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar .menu li {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .sidebar .menu li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    opacity: 0; /* Initially hide text */
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+  }
+  
+  .sidebar .menu li i {
+    margin-right: 10px;
+    font-size: 1.5rem;
+  }
+  
+  /* Hover Styles (expand the sidebar) */
+  .sidebar:hover {
+    width: 200px; /* Sidebar expands on hover */
+  }
+  
+  .sidebar:hover .logo {
+    opacity: 1; /* Show logo text when expanded */
+  }
+  
+  .sidebar:hover .menu li a {
+    opacity: 1; /* Show menu items when expanded */
+  }
+  
+  /* Optional: Adjust the main container when sidebar is expanded */
+  .container {
+    transition: margin-left 0.3s ease;
+    margin-left: 60px; /* Initial margin when sidebar is narrow */
+  }
+  
+  .sidebar:hover + .container {
+    margin-left: 200px; /* Push the container to the right when the sidebar is expanded */
+  }
+  
+  /* Optional: Add styles for the hover effect on links */
+  .sidebar .menu li a:hover {
+    color: #4caf50;
+  }
+  

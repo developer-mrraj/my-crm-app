@@ -1,0 +1,37 @@
+<!-- LOGIN FORM -->
+<div *ngIf="isActive" class="container border border-primary border-5 shadow-lg p-3 mb-5 bg-body-tertiary rounded d-grid gap-2 col-6 mx-auto">
+  <p style="text-align: center;">LOGIN FORM</p>
+  <form [formGroup]="loginForm">
+    <div class="form-floating mb-3">
+      <input type="email" formControlName="username" class="form-control" id="floatingInput">
+      <label for="floatingInput">Email address</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="password" formControlName="password" class="form-control" id="floatingPassword">
+      <label for="floatingPassword">Password</label>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="onLogin()" (click)="reloadPage()">Submit</button>
+  </form>
+  <p  style="text-align: center;cursor:pointer;">If you are not signed up, kindly <a (click)="toggleForm()">Signup</a></p>
+</div>
+
+<!-- SIGNUP FORM -->
+<div *ngIf="!isActive" class="container border border-primary border-5 shadow-lg p-3 mb-5 bg-body-tertiary rounded d-grid gap-2 col-6 mx-auto">
+  <p style="text-align: center;">SIGNUP FORM</p>
+  <form [formGroup]="signupForm">
+    <div class="form-floating mb-3">
+      <input type="text" formControlName="name" class="form-control" id="name">
+      <label for="name">Username</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="email" formControlName="email" class="form-control" id="floatingInput">
+      <label for="floatingInput">Email address</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="password" formControlName="password" class="form-control" id="floatingPassword">
+      <label for="floatingPassword">Password</label>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="onSignup()">Submit</button>
+  </form>
+  <p  style="text-align: center;cursor:pointer;">Already have an account? <a (click)="toggleForm()">Login</a></p>
+</div>

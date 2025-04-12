@@ -1,0 +1,155 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="../../../assets/aura logo 2.jpg" alt="Logo" class="logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact Us</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="btn btn-primary ms-3" [routerLink]="['/auth']">Sign Up / Login</a>
+        </li> -->
+      </ul>
+    </div>
+    
+  </div>
+  <div>
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" >
+  Sign Up / Login
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <app-auth></app-auth>
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> -->
+    </div>
+  </div>
+</div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero d-flex align-items-center text-center">
+  <div class="container">
+    <h1 class="hero-title">Unleash Your Business's <br> True Potential</h1>
+    <p class="hero-text">Power up your retail business with our all-in-one CRM—streamline sales, manage inventory, and boost customer loyalty effortlessly</p>
+    <a routerLink="/business-overview" class="btn get-started-btn mt-5">Get Started</a>
+  </div>
+</section>
+
+
+
+<section class="features container my-5">
+  <h2 class="text-center mb-5">Why Choose Our CRM?</h2>
+
+  <!-- Feature 1: Text Left, Image Right -->
+
+  @for(feature of features; track feature; let i = $index){
+    <div class="row align-items-center feature" *ngIf="i % 2 === 0"  >
+      <div class="col-md-6">
+        <h3> {{feature.title}} </h3>
+        <p>{{feature.description}} </p>
+      </div>
+      <div class="col-md-6 text-center">
+        <img [src]="feature.image" alt="Feature image" class="feature-img">
+      </div>
+    </div>
+
+    <div class="row align-items-center feature flex-md-row-reverse" *ngIf="i % 2 !== 0">
+    <div class="col-md-6">
+      <h3> {{ feature.title }} </h3>
+      <p>{{feature.description}}</p>
+    </div>
+    <div class="col-md-6 text-center">
+      <img [src]="feature.image" alt="Feature image" class="feature-img">
+    </div>
+  </div>
+  }
+
+
+ 
+</section>
+
+<div class="growth-section container text-center mb-5">
+  <h2 class="growth-title mb-4">Our Retailers Are Seeing Real Growth</h2>
+  
+  <div class="row growth-stats mb-4">
+    <div class="col-md-4">
+      <h3 class="growth-number">1,000+ Retailers</h3>
+      <p class="growth-description">Trusted and using our CRM solution daily.</p>
+    </div>
+    <div class="col-md-4">
+      <h3 class="growth-number">30% Increase in Sales</h3>
+      <p class="growth-description">On average, our customers see a boost in revenue.</p>
+    </div>
+    <div class="col-md-4">
+      <h3 class="growth-number">95% Customer Satisfaction</h3>
+      <p class="growth-description">Our users love the ease and efficiency of our CRM.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <p class="cta-text">
+        Invest in your business's future with our CRM, the key to unlocking growth and maximizing ROI. 
+        Our data-driven insights empower retailers to make smarter decisions, streamline operations, and foster stronger customer relationships. 
+        With our CRM, you can focus on what matters most—growth. Achieve measurable success, scale efficiently, and watch your returns soar.
+      </p>
+    </div>
+  </div>
+
+  <!-- <a href="#" class="cta-button btn btn-lg mt-4">Get Started Now</a> -->
+</div> 
+
+<!-- Contact Us Footer Section -->
+<footer class="footer-section bg-dark text-white py-5">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-md-12">
+        <h4 class="footer-title mb-3">Contact Us</h4>
+        <p class="footer-description mb-3">
+          Have questions or inquiries? We're here to help! Reach out to us anytime.
+        </p>
+        <p class="footer-info mb-1">
+          Email: <a href="mailto:support@yourcompany.com" class="footer-link">supportyourcompany.com</a>
+        </p>
+        <p class="footer-info mb-1">
+          Phone: <a href="tel:+1234567890" class="footer-link">+1 (234) 567-890</a>
+        </p>
+        <p class="footer-info mb-3">
+          Address: 123 Retail St., City, Country
+        </p>
+        <hr class="footer-separator">
+        <p class="footer-trademark">
+          &copy; 2025 Your Company Name. All Rights Reserved. | <a href="#" class="footer-link">Privacy Policy</a>
+        </p>
+        <p class="thank-you">
+          Thank you for visiting our site and choosing our CRM solution for your business!
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>

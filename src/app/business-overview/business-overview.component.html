@@ -1,0 +1,45 @@
+<div class="navbar">
+    <div class="navbar-left">
+      <h2>MyApp</h2>
+    </div>
+    <div class="navbar-right">
+      <button class="btn login-btn" type="button" (click)="onLogoff()">Logout</button>
+      <!-- <button class="btn signup-btn">Signup</button> -->
+    </div>
+  </div>
+  
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <ul class="menu">
+      <li>
+        <i class="bx bx-bar-chart"></i>
+        <a routerLink="dashboard">Dashboard</a>
+      </li>
+      <li>
+        <i class='bx bx-spreadsheet'></i>
+        <a routerLink="billing">Billing</a>
+      </li>
+      <li>
+        <i class="bx bx-user"></i>
+        <a routerLink="customers">Profile</a>
+      </li>
+      <li>
+        <i class="bx bx-line-chart"></i>
+        <a routerLink="sales-tracking">Sales</a>
+      </li>
+      <li>
+        <i class="bx bx-box"></i>
+        <a routerLink="inventory">Inventory</a>
+      </li>
+      <li>
+        <i class="bx bx-dollar-circle"></i>
+        <a routerLink="finance">Finance</a>
+      </li>
+    </ul>
+  </div>
+  
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+
+  

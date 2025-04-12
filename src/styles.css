@@ -1,1 +1,82 @@
-/* You can add global styles to this file, and also import other style files */
+/* === Global Styles === */
+:root {
+    --primary-color: #6a0dad; /* Purple */
+    --text-color: #000000; /* Black */
+    --text-light: #ffffff; /* White */
+    --bg-light: #ffffff; /* White Background */
+    --bg-dark: #f8f9fa; /* Light Gray Background */
+    --border-radius: 8px; /* Standard rounded corners */
+  }
+  
+  /* === Body Styling === */
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* === Text Sizes === */
+  h1 {
+    font-size: 36px; /* Big Headings */
+    font-weight: bold;
+  }
+  
+  h2 {
+    font-size: 28px; /* Medium Headings */
+    font-weight: bold;
+  }
+  
+  p, span {
+    font-size: 16px; /* Standard text */
+  }
+  
+  /* === Buttons === */
+  button, .btn {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  
+  button:hover, .btn:hover {
+    background-color: #540b9b; /* Darker purple on hover */
+  }
+  
+  /* === Input Fields === */
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+  }
+  
+  /* === Links === */
+  a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+  }
+  
+  a:hover {
+    color: #540b9b;
+  }
+  
+  /* === Containers === */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  body {
+    font-family: 'Dancing Script', cursive;
+  }
+  

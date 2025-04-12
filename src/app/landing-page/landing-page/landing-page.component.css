@@ -1,0 +1,324 @@
+/* Navbar */
+.navbar {
+  padding: 1rem;
+}
+.navbar-brand .logo {
+  height: 70px;
+}
+.navbar-nav .nav-link {
+  font-size: 1rem;
+  margin-right: 1rem;
+  color: #333;
+  transition: color 0.3s;
+}
+.navbar-nav .nav-link:hover {
+  color: #007bff;
+}
+.container{
+  padding: 0;
+}
+
+/* Hero Section */
+.hero {
+  background: url('../../../assets/hero_background.avif') no-repeat center center/cover; /* Add a background image */
+  padding: 80px 0; /* Add padding for better spacing */
+  position: relative;
+  color: #fff; /* White text color */
+  text-align: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Hero Title */
+.hero-title {
+  font-family: 'Poppins', sans-serif; /* Modern font */
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: black;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+/* Hero Text */
+.hero-text {
+  font-family: 'Lora', serif; /* Elegant, serif font */
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: black;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+  letter-spacing: 1px;
+}
+
+/* Get Started Button */
+.get-started-btn {
+  font-family: 'Roboto', sans-serif; /* Modern sans-serif font */
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #007bff; /* Vibrant blue */
+  border: none;
+  padding: 15px 30px;
+  border-radius: 30px; /* Rounded corners */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.get-started-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-3px); /* Lift effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem; /* Smaller font size on mobile */
+  }
+
+  .hero-text {
+    font-size: 1rem; /* Smaller text size on mobile */
+  }
+
+  .get-started-btn {
+    font-size: 1rem; /* Adjust button size */
+    padding: 12px 24px;
+  }
+}
+
+
+
+.features {
+  max-width: 1100px;
+  margin: auto;
+}
+.features h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+}
+.feature {
+  margin-bottom: 4rem;
+}
+.feature h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+}
+.feature p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+.feature-img {
+  width: 100%; /* Make sure the image takes up full width of its container */
+  max-width: 400px; /* Set a maximum width for the images */
+  height: auto; /* Maintain the aspect ratio */
+  object-fit: cover; /* Make the image fill its container, cropping if necessary */
+  border-radius: 8px; /* Optional: Adds rounded corners to the image */
+}
+
+/* customer satisfaction css */
+/* Styling for the growth section container */
+.growth-section {
+  /* padding: 50px 15px; */
+  /* background-color: #f9f9f9; */
+  border-radius: 8px;
+  /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); */
+}
+
+.growth-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.growth-stats {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.col-md-4 {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.growth-number {
+  font-size: 28px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.growth-description {
+  font-size: 16px;
+  color: #666;
+  margin-top: 10px;
+}
+
+.col-md-4:hover {
+  transform: translateY(-10px);
+}
+
+/* CTA Text Styling */
+.cta-text {
+  font-size: 18px;
+  color: #373737;
+  margin-top: 30px;
+  line-height: 1.6;
+  font-weight: 400;
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+.cta-text span {
+  font-weight: 600;
+  color: #007bff;
+}
+
+/* Styling for the Button */
+.cta-button {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+  font-size: 18px;
+  padding: 15px 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+  .growth-title {
+    font-size: 28px;
+  }
+
+  .growth-stats {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .col-md-4 {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .cta-text {
+    font-size: 16px;
+  }
+}
+
+
+/* footer */
+
+/* Footer Styles */
+.footer-section {
+  background-color: #07396c !important;
+  color: #ffffff;
+  padding: 50px 0;
+}
+
+.footer-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.footer-description {
+  font-size: 16px;
+  color: #bbb;
+  margin-bottom: 15px;
+}
+
+.footer-info {
+  font-size: 16px;
+  color: #bbb;
+  margin-bottom: 10px;
+}
+
+.footer-info a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-info a:hover {
+  color: #007bff;
+}
+
+.footer-separator {
+  border-top: 1px solid #444;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.footer-trademark {
+  font-size: 14px;
+  color: #bbb;
+}
+
+.footer-link {
+  color: #bbb;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: #007bff;
+}
+
+.thank-you {
+  font-size: 16px;
+  color: #bbb;
+  margin-top: 20px;
+}
+
+@media (max-width: 767px) {
+  .footer-title {
+    font-size: 20px;
+  }
+
+  .footer-description {
+    font-size: 14px;
+  }
+
+  .footer-info {
+    font-size: 14px;
+  }
+
+  .footer-trademark {
+    font-size: 12px;
+  }
+}
+ 
